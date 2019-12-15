@@ -1,0 +1,174 @@
+extends layout
+block content
+    .container.reg
+        .text-center
+            //- img.d-block.mx-auto.mb-4(src="images/f.jpg" alt="" width="72" height="72")
+            //- h2 Registration form
+            header.mycard-header
+                br
+                h1.card-title.text-center.Reg Registration Form 
+                hr
+        .container-fluid
+            .panel-body
+                .container.myform
+                    .row
+                        .col-md-12
+                            form.needs-validation(novalidate="" method="POST" action="/register" name="registration")
+                                .row
+                                    .col-md-4.mb-3
+                                        label(for="parentId").Reg
+                                            | Customer Id
+                                            span.star *
+                                        input#customerid.form-control(type="text" placeholder="" value="" name="parentId" required="")
+                                        .invalid-feedback
+                                            | Customer Id is required.
+                                    .col-md-4.mb-3
+                                        label(for="parent").Reg
+                                            | Parents name
+                                            span.star * 
+                                            small.text-muted  (may include Mr/Mrs/Eng/Dr... )
+                                        input#parentname.form-control(type="parent" placeholder=""  name="parentname" required="")
+                                        .invalid-feedback
+                                            | Please enter Parents Name.
+                                    .col-md-4.mb-3
+                                        label(for="parentProffession").Reg
+                                            | Parents proffession
+                                            span.star * 
+                                            small.text-muted  ( Parents proffession )
+                                        input#parentsproffession.form-control(type="parent" placeholder=""  name="parentsProffesion" required="")
+                                        .invalid-feedback
+                                            | Please enter Parents Proffesion.
+                                //- .mb-3
+                                //-     label(for="parent").Reg
+                                //-         | Parents name
+                                //-         span.star * 
+                                //-         small.text-muted (May include more details)
+                                //-     input#parentname.form-control(type="parent" placeholder=""  name="parentname" required="")
+                                //-     .invalid-feedback
+                                //-         | Please enter Parents Name.
+                                
+                                .row
+                                    .col-md-4.mb-3
+                                        label(for="childsname").Reg 
+                                            | Childs name
+                                            span.star *
+                                            small.text-muted  ( Enter child's full names )
+                                        input#childsname.form-control(type="text" placeholder="" value="" name="childsname" required="")
+                                        .invalid-feedback
+                                            | Valid Childs name is required.
+                                    .col-md-4.mb-3
+                                        label(for="childage").Reg 
+                                            | Child's age
+                                            span.star *
+                                            small.text-muted  ( if in months, specify ' months ')
+                                        input#childage.form-control(type="text" placeholder="" value="" name="childsage" required="")
+                                        .invalid-feedback
+                                            | Input child ID is required.
+                                    .col-md-4.mb-3
+                                        label(for="childid").Reg 
+                                            | Child ID
+                                            span.star *
+                                        input#childid.form-control(type="text" placeholder="" value="" name="childid" required="")
+                                        .invalid-feedback
+                                            | Input child ID is required.
+                                
+                                .row
+                                    .col-md-6.mb-3
+                                        label(for="email").Reg
+                                            | Email 
+                                            span.star *
+                                            small.text-muted  ( Please enter parents working email )
+
+                                        input#email.form-control(type="email" placeholder="you@example.com" name="email" required="")
+                                        .invalid-feedback
+                                            | Please enter a valid email address.
+                                    .col-md-6.mb-3
+                                        .form-group
+                                            label(for="childs date of birth").Reg 
+                                                | Childs Date of Birth
+                                                sapn.star *
+                                            input#exampleInputDOB1.form-control(type='date', placeholder='Date of Birth' name="dob" required="")
+                                            .invalid-feedback
+                                                | Please enter date of birth.
+                                            small.form-text.text-muted Month / Date / Year.
+
+                                .mb-3
+                                    label(for="address").Reg 
+                                        | Address
+                                        span.star *
+                                        small.text-muted ( May include details of where you stay )
+
+                                    input#address.form-control(type="text" placeholder="E.g Le Palm Muyenga" required="" name="address")
+                                    .invalid-feedback
+                                        | Please enter your shipping address.
+                                .row
+                                    .col-md-4.mb-3
+                                        label(for="clubs").Reg 
+                                            | Clubs
+                                            span.star *
+                                        select.form-control(name="club" required="")
+                                            option(value="")  ----choose--- 
+                                            option(value="Morning") Morning
+                                            option(value="Afternoon") Afternoon
+                                            option(value="Evening") Evening
+                                            option(value="Night") Night
+                                        .invalid-feedback
+                                            | Please select a club
+                                    .col-md-4.mb-3
+                                        label(for="babysitter").Reg
+                                            | Baby sitter
+                                            span.star *
+                                        select.form-control(name="babysitter" required="")
+                                            option(value="")  ----choose--- 
+                                            option(value="John MO-0001") John MO-0001
+                                            option(value="Becky AF-0002") Becky AF-0002
+                                            option(value="Doreen EV-0003") Doreen EV-0003
+                                            option(value="Nanteza NT-0004") Nanteza NT-0004
+                                            option(value="Daniel NT-0004") Daniel MO-0004
+                                        .invalid-feedback
+                                            | Please select a baby sitter
+                                    .col-md-4.mb-3
+                                        label(for="telephone no.").Reg 
+                                            | Contact
+                                            span.star *
+                                            small.text-muted  Enter your telephone number
+
+                                        input#TelephoneNo.form-control(type="tel" placeholder="" required="" name="telno")
+                                        .invalid-feedback
+                                            | Telephone number required.
+                                hr
+                                br
+                                br
+                                h4.text-center.admin To be completed either by the supervisor or baby sitter   
+                                br         
+                                .row
+                                    .col-md-6.mb-3
+                                        label(for="username").Reg
+                                            | Username
+                                            span.star * 
+                                        input#email.form-control(type="username" placeholder="" name="username" required="")
+                                        .invalid-feedback
+                                            | Enter username to register parent
+                                        small.form-text.text-muted Dont share this username
+                                    .col-md-6.mb-3
+                                        label(for="password").Reg 
+                                            | Password
+                                            span.star *
+                                        input#password.form-control(type="password" placeholder="" required="" name="password" maxlength="8")
+                                        .invalid-feedback
+                                            | Your password is required.
+
+                                .row
+                                    .col-md-6.mb-3
+                                        button.btn.my-btn.btn-lg.container(type="submit") Register
+                                    .col-md-6.mb-3
+                                        button.btn-lg.container.resetbtn(type="reset") Cancel
+                                
+        footer.my-5.pt-5.text-muted.text-center.text-small
+          
+
+    script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js")
+    script.
+      window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\\/script>')
+    script(src="js/bootstrap.bundle.min.js" )
+    script(src="js/form-validation.js")                                

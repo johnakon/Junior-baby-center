@@ -1,0 +1,24 @@
+extends layout
+block content
+    header.card-header
+        h4.card-title Login
+    if error
+        div.alert.alert-danger #{error}
+    form(method="POST" action='/login')
+        .text-center.mb-4
+              img.mb-4(src="images/f.jpg" alt="" width="72" height="72")
+        div.form-row
+            div.col.form-group
+                label User name
+                input.form-control(name="username")
+                .invalid-feedback
+                    | Valid first name is required.
+        div.form-row
+            div.col.form-group
+                label Enter Password
+                input.form-control(type="password" name="password")
+                .invalid-feedback
+                    | Valid first name is required.
+        div.form-row
+            div.col.form-group
+                button.btn.my-btn.btn-block(type='submit') Login :-)

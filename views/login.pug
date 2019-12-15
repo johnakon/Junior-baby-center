@@ -1,0 +1,95 @@
+//- extends layout
+//- block content
+//-     header.card-header
+//-         h4.card-title Login
+//-     if error
+//-         div.alert.alert-danger #{error}
+//-     form(method="POST" action='/login')
+//-         div.form-row
+//-             div.col.form-group
+//-                 label User name
+//-                 input.form-control(name="username")
+//-                 .invalid-feedback
+//-                     | Valid first name is required.
+//-         div.form-row
+//-             div.col.form-group
+//-                 label Enter Password
+//-                 input.form-control(type="password" name="password")
+//-                 .invalid-feedback
+//-                     | Valid first name is required.
+//-         div.form-row
+//-             div.col.form-group
+//-                 button.btn.my-btn.btn-block(type='submit') Login :-)
+
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    link(rel="stylesheet" href="stylesheets/bootstrap.min.css")
+    link(rel="stylesheet" href="stylesheets/admin.css")
+    link(rel="stylesheet" href="stylesheets/styles.css")
+    style.
+      .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      }
+      @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+      }
+      }
+      /* Sign in button */
+      .btn-primary-btn {
+      color: #fff;
+      background-color: #0069d9;
+      border-color: #0062cc;
+      }
+      .btn-primary-btn:hover {
+      color: #fff;
+      background-color: #0069d9;
+      border-color: #0062cc;
+      }
+    title Login
+  body(onload="document.registration.username.focus()")
+    .container
+      .row.no-gutter
+        // left side  containing image
+        .d-none.d-md-flex.col-md-4.col-lg-6.bg-image
+        // right side containing login
+        .col-md-8.col-lg-6
+          form.form-signin(name="registration" method="POST" action='/login')
+            .text-center.mb-4
+              img.mb-4(src="images/f.jpg" alt="" width="72" height="72")
+            //-   h1.h3.mb-3.font-weight-normal Junior Baby Center
+            //-   p Caring babysitters for your kids
+            header.cd-header
+                h4.card-title.text-center Login
+            if error
+                div.alert.alert-danger #{error}
+            br
+            form(method="POST" action='/login')
+                div.form-row
+                    div.col.form-group
+                        label User name
+                        input.form-control(name="username")
+                        .invalid-feedback
+                            | Valid first name is required.
+                div.form-row
+                    div.col.form-group
+                        label Enter Password
+                        input.form-control(type="password" name="password")
+                        .invalid-feedback
+                            | Valid first name is required.
+                div.form-row
+                    div.col.form-group
+                        button.btn.my-btn.btn-block(type='submit') Login
+            p.mt-5.mb-3.text-muted.text-center © JBC
+    script(scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.js").
+    script(src="js/bootstrap.bundle.min.js")

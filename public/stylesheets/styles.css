@@ -1,0 +1,67 @@
+.my-btn{
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+  }
+  
+.my-btn:hover {
+color: #fff;
+background-color: #0069d9;
+border-color: #0062cc;
+}
+
+.cd-header {
+    border-bottom: 1px solid yellow;
+    background-color: khaki;
+}
+
+/* submit button */
+.btnSub{
+  color: #fff;
+  background-color: #248b29;
+  border-color: #248b29;
+}
+
+.btnSub:hover {
+  color: #fff;
+  background-color: #248b29;
+  border-color: #248b29;
+}
+
+/* log out button */
+.btnLogOut{
+  color: #fff;
+  background-color: #2d2686;
+  border-color: #2d2686;
+}
+
+.btnLogOut:hover {
+  color: #fff;
+  background-color: #2d2686;
+  border-color: #2d2686;
+}
+
+/* theadMenu */
+.theadMenu {
+  color: #fff;
+  background-color: teal;
+  border-color: dimgray;
+}
+
+.Reg{
+  background-color: whitesmoke;
+  color: teal;
+  border-color: green;
+}
+
+h4{
+  color: teal;
+  background-color: whitesmoke;
+}
+
+.star{
+  color: red;
+}
+.admin{
+  text-decoration: gainsboro underline !important;
+}
